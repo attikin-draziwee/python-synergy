@@ -2,7 +2,8 @@
 main.py
 old_main.py
 .DS_Store
-.vscode/*
+.vscode/**
+.vscode/settings.json
 
 #folders
 .vscode/
