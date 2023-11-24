@@ -1,6 +1,7 @@
 # Temp files of classroom files.
 oop.py
 main.py
+exceptions.py
 old_main.py
 .DS_Store
 .vscode/**

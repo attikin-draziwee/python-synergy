@@ -32,7 +32,7 @@ class Turtle:
     __y = 0
     __s = 3
 
-    def __init__(self, x, y, s):
+    def __init__(self, x, y, s=2):
         self.__x = x
         self.__y = y
         self.__s = s
@@ -68,10 +68,15 @@ class Turtle:
             if (p2 < 0):
                 return p1 + abs(p2)
             else:
-                p1 - p2
+                return p1 - p2
 
     def count_moves(self, x2, y2):
-        return ceil((self.distance_between(self.__x, x2) + self.distance_between(self.__y, y2)) / self.__s)
+        moves = (self.distance_between(self.__x, x2) +
+                 self.distance_between(self.__y, y2)) / self.__s
+        if ((moves*10 % 10) != 00):
+            return f"Ошибка! Черепашка не сможет добраться до этих координат ({x2}, {y2}) с текущей скоростью."
+        else:
+            return moves
 
     def __str__(self):
         return f"x: {self.__x} y: {self.__y} speed: {self.__s}"
